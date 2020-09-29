@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
+
+body{
+    margin:0;
+    padding:0;
+    font-family: Helvetica;
+    background-image: linear-gradient(to right, #E65763, #34073D);
+    color: #FFF;
+    text-align: center;
+    padding-top: 30px;
+}
+
+h2{
+    font-family: "Rouge Script";
+}
+
+
+#tasks-container{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Task Form*/
+
+#tasks-header{
+    margin-top: 40px;
+}
+
+/*Verificar se dá pra fazer com flexbox*/
+#add-task-form{
+    position: relative;
+}
+
+#add-task-form input{
+   box-sizing: border-box;
+   border: 1px solid #34073D;
+   background: #FFF;
+   color: #34073D;
+   padding: 15px;
+   font-size: 18px;
+   width: 100%;
+}
+
+#add-task-form input::placeholder{
+    color: #34073D;
+}
+
+/*Retira a borda interna de foco no input*/
+#add-task-form input:focus{
+    outline: none;
+}
+
+#add-btn{
+    position: absolute;
+    background: #FFF;
+    border: 1px solid #34073D;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 60px;
+    height: 53px;
+    top:0;
+    right: 0;
+    padding-top: 3px;
+}
+
+/*Efeito no botão, o efeito do transition fica direto no botão*/
+#add-btn:hover{
+    background-color: #34073D;
+    color: #FFF;
+}
+
+ion-icon{
+    font-size: 25px;
+}
+
+/*Lista de tarefas*/
+
+#task-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+#task-list li{
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    border-bottom: 1px solid #34073D;
+    background-color: #FFF;
+    color: #34073D;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+#task-list li span{
+    font-size: 18px;
+}
+
+#task-list ion-icon{
+    position: absolute;
+    top: 0;
+    height: 40px;
+    width: 30px; 
+    padding: 5px;   
+    transition: 0.5s;
+    cursor: pointer;
+}
+    
+.done-btn{
+    right: 40px;
+}
+
+.done-btn:hover{
+   color: #FFF;
+   background-color: #09E01B;
+}
+
+.remove-btn{
+    right: 0;
+}
+
+.remove-btn:hover{
+    color: #FFF;
+    background-color: #EB0927;
+ }
+
+.hide{
+    display: none;
+}
+
+#task-list li.done{
+    background-color: #34073D;
+    color: #FFF;
+    text-decoration: line-through;
+}
